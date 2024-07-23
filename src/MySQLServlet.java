@@ -38,7 +38,7 @@ PrintWriter out = response.getWriter();
  String password = "";
 
  try {
- Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+ Class.forName("com.mysql.jdbc.Driver").newInstance();
  conn = DriverManager.getConnection(url, user, password);
  Statement stmt = conn.createStatement();
  String sql = "SELECT * FROM test_table";
